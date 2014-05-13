@@ -4,13 +4,17 @@ def prep
 end
 
 def preconditions
-  zhivago = Doctor.create(name: "Zhivago")
-  bob = Patient.create(name: "Bob")
+  @zhivago = Doctor.create(name: "Zhivago")
+  @bob = Patient.create(name: "Bob")
 end
 
 def swok_one
-  zhivago.appointments.create(patient: bob, room_number: 666, symptom: "Viennese Mumbling Measles")
+  @zhivago.appointments.create(patient: @bob, room_number: 666, symptom: "Viennese Mumbling Measles")
 end
 
 def swok_two
+  params = {:specialties=>[{:name=>"Prussian Flu"}, {:name=>"Viennese Mumps"}]}
+  @zhivago.specialties.create(params[:specialties])
 end
+
+prep; preconditions; swok_one; swok_two
