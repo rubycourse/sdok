@@ -18,3 +18,5 @@ def swok_two
 end
 
 prep; preconditions; swok_one; swok_two
+
+10.times{ Appointment.create( patient: Patient.create(name: Faker::Name.name), doctor: Doctor.find_by_name("Zhivago")) }
