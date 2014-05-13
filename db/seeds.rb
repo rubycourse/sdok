@@ -11,3 +11,6 @@ end
 def swok_one
   zhivago.appointments.create(patient: bob, room_number: 666, symptom: "Viennese Mumbling Measles")
 end
+
+def swok_two
+end
