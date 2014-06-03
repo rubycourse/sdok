@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Swok::Application.load_tasks
+Sdok::Application.load_tasks

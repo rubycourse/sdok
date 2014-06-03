@@ -1,17 +1,17 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: swok_development
+  database: sdok_development
   pool: 5
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: swok_test
+  database: sdok_test
   pool: 5
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: swok_production
+  database: sdok_production
   pool: 5

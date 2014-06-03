@@ -1,3 +1,3 @@
-Swok::Application.routes.draw do
+Sdok::Application.routes.draw do
    root 'welcome#index'
 end
