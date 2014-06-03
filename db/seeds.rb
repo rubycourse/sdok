@@ -1,6 +1,5 @@
 def prep
-  Doctor.destroy_all
-  Patient.destroy_all
+  ActiveRecord::Base.connection.execute("TRUNCATE TABLE doctors, patients, appointments")
 end
 
 def preconditions
