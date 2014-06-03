@@ -19,3 +19,9 @@ end
 prep; preconditions; sdok_one; sdok_two
 
 10.times{ Appointment.create( patient: Patient.create(name: Faker::Name.name), doctor: Doctor.find_by_name("Zhivago")) }
+
+100.times do
+  Friend.create name: Faker::Name.name, sex: 'F', country: Faker::Address.country, age: ((20..60).to_a.sample), iq: ((120..250).to_a.sample)
+end
+
+Friend.all.sample(5).each{|f| f.update_attribute :country, "Russia"}
