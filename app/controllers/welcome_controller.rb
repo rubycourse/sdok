@@ -2,7 +2,6 @@ class WelcomeController < ApplicationController
   def index
   end
 
-  def swok_five
-    render text: 'stuff'
+  def sdok_five
   end
 end
